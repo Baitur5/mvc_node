@@ -1,8 +1,7 @@
+const bodyparser = require('koa-bodyparser');
+const { router } = require("./http/students/router");
 
-const { bodyparser } = require("./http/students/index")
-const { router } = require("./http/students/router")
-
-const Koa = require("koa")
+const Koa = require("koa");
 
 async function main() {
 

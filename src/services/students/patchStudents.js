@@ -1,14 +1,12 @@
 let { collection } = require("./db.js")
 
 
-function patchStudentsService(student, ctx) {
-
-  const studentId = Number(ctx.params.id);
+function patchStudentsService(student, studentId) {
   const studentDb = collection.find((obj) => obj.id === studentId);
 
 
   if (!studentDb) {
-    ctx.throw(404);
+    throw new Error('no student found');
   }
 
   const newStudent = {
