@@ -20,8 +20,6 @@ function patchStudentsService(student, ctx) {
   collection.splice(index, 1);
   collection.push(newStudent);
 
-  
-
   console.log(collection);
   return newStudent;
 }
