@@ -16,10 +16,11 @@ function patchStudentsService(student, ctx) {
     ...student,
   }
 
-  collection = collection
-    .filter(({ id }) => id !== studentId);
+  const index = collection.indexOf(studentDb);
+  collection.splice(index, 1);
   collection.push(newStudent);
 
+  
 
   console.log(collection);
   return newStudent;
