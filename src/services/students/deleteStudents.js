@@ -9,9 +9,7 @@ function deleteStudentsService(id) {
   }
 
   const index = collection.indexOf(studentDb);
-  if (index > -1) { // only splice array when item is found
-    collection.splice(index, 1); // 2nd parameter means remove one item only
-  }
+  collection.splice(index, 1);
 }
 
 
